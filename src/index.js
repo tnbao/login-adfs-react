@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import adalProvider from './ADFS/adalProvider';
+
+adalProvider.init({
+  instance: 'https://sso6.neu.edu.vn/',
+  tenant: 'adfs',
+  clientId: 'aa7aba10-3697-4b9d-9d01-3f292be9afbf'
+})
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
